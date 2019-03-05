@@ -80,7 +80,7 @@
                         <button type="button" class="control" data-sort="default:desc">Descending</button>
                     </div>
                 </div>
-                <div class="search" >
+                <div class="search" style="float:right;padding-top: 18px;" >
                     <form>
                         <input type="search" id="search-input" >
                     </form>

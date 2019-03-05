@@ -59,7 +59,7 @@
             </div>
         </div>
         @if(isset($testimonials) && array_key_exists('posts', $testimonials))
-            <div class="col-12 testimonial-style clearfix" style="background:#fff;">
+            <div class="col-12 asd clearfix" style="background:#fff;">
                 @foreach($testimonials['posts'] as $testimonial)
                     <div class="col-sm-12 col-md-4 col-xs-12">
                         <div class="comment-second">

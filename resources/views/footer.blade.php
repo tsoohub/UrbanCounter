@@ -1,4 +1,6 @@
-<div id="go-top" style="display: block;"><span class="fa fa-arrow-up"></span></div>
+<div id="go-top" style="display: block;">
+    <span class="fa fa-arrow-up"></span>
+</div>
 <!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -19,6 +21,7 @@
         </div>
     </div>
 </div>
+<style>#go-top{display:none;position:fixed;bottom:20px;right:20px;background:rgb(6,97,94);cursor:pointer;border-radius:50%;z-index:123456}#go-top span{padding:12px;color:#fff;font-size:24px}#go-top span:hover{background-color:#10997e;border-radius:50%}.stones .controls .check{display:inline-block;-moz-border-radius-topleft:3px;-moz-border-radius-topright:3px;height:35px;line-height:35px;margin-right:25px;padding-left:10px;position:relative;cursor:pointer;text-transform:uppercase}.stones .controls .check .check-title{display:inline-block;font-family:'Raleway',sans-serif;font-size:17px;font-weight:700;color:#fff;position:relative}.checkbox-container{display:inline-block;position:relative;padding-right:35px;margin-bottom:12px;cursor:pointer;font-size:22px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.checkbox-container input{position:absolute;opacity:0;cursor:pointer;height:0;width:0}.checkmark{position:absolute;top:5px;right:0;height:25px;width:25px;border:1px solid #999}.checkbox-container:hover input~.checkmark{background-color:#585858}.checkbox-container input:checked~.checkmark{border:1px solid #00a86b}.checkmark:after{content:"";position:absolute;display:none}.checkbox-container input:checked~.checkmark:after{display:block;position:absolute;height:16px;width:16px;content:'';left:3px;top:50%;margin-top:-8px;background:url(../data/icon/check.png);opacity:1}.stones .mix-container .mix{-webkit-transition:width 0.5s}.images-container{display:flex;justify-content:space-evenly}</style>
 <!-- SCRIPT -->
 <script type="text/javascript" src="{{ asset('js/jquery-1.10.2.min.js')}}"></script>
 <script type="text/javascript" src="{{ asset('js/bootstrap.min.js')}}"></script>
