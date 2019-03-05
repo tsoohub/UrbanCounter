@@ -1,0 +1,303 @@
+[33mcommit 489581c4b6d7ae55a8ef9cb3c68315247b296b74[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Fri Feb 8 12:04:50 2019 -0600
+
+    Test commit
+
+[33mcommit 39120ee4a0edf8f0d1fd320c0ecba98f2b43f45e[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Thu Feb 7 14:09:24 2019 -0600
+
+    Stone image
+
+[33mcommit 332270a88f94cb4ffc9716e202ebf7c4c66ee511[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Wed Feb 6 16:11:08 2019 -0600
+
+    Urban Detail
+
+[33mcommit 4d510a96d17d3290f3c0d55a2e2d0d7250fbed00[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Wed Feb 6 11:10:15 2019 -0600
+
+    Sink data
+
+[33mcommit cfac7296164e0eea36a381aaee4845789d15fbb5[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Mon Feb 4 13:15:52 2019 -0600
+
+    Change Base URL to old
+
+[33mcommit 39bf02bdc4d8d91a8f88b16a03cd4f4749f96975[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Mon Feb 4 13:00:12 2019 -0600
+
+    Changes of the table changes
+
+[33mcommit 301fd24438b6297c55e2dcd11b124182f662a9dd[m
+Merge: 159edaa b2c7793
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Tue Jan 29 13:00:37 2019 -0600
+
+    Merge https://urbancountertop.scm.azurewebsites.net:443/urbancountertop
+
+[33mcommit 159edaa613923bd722b9a1825744a2637b98a177[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Tue Jan 29 13:00:17 2019 -0600
+
+    Gallery Page
+
+[33mcommit b2c7793b08d781aae26d06ff38c2d97d26ce8822[m
+Merge: bf44cf5 84de219
+Author: Amartuvshin <amar@icodice.com>
+Date:   Tue Jan 29 12:17:39 2019 -0600
+
+    Merge https://urbancountertop.scm.azurewebsites.net:443/urbancountertop
+
+[33mcommit bf44cf5183c4238e087a2061e917af7f88b1d1ca[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Tue Jan 29 12:16:40 2019 -0600
+
+    update
+
+[33mcommit 84de219622d4c51a562dad253a32568b8bf8a4bd[m
+Merge: 2b75d32 157f3ee
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Tue Jan 29 12:08:32 2019 -0600
+
+    Merge https://urbancountertop.scm.azurewebsites.net:443/urbancountertop
+
+[33mcommit 2b75d32e3a13ac3490fd1b0d70477fca5a001473[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Tue Jan 29 12:07:52 2019 -0600
+
+    Gallery Page
+
+[33mcommit 157f3ee7b53d8f8d5c5841277ac14abb7bf83447[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Tue Jan 29 10:11:13 2019 -0600
+
+    Update
+
+[33mcommit 6d5e3a9d1013543a7a097f822cb23105b0f7ba34[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Tue Jan 29 09:55:20 2019 -0600
+
+    Update
+
+[33mcommit a94e13f0f8d48b67b71a62f933d91f9604d5a063[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Tue Jan 29 09:51:57 2019 -0600
+
+    Update
+
+[33mcommit 7dd558400a7594aca53969990935976780412291[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Tue Jan 29 09:46:04 2019 -0600
+
+    # Url
+    # CSS
+
+[33mcommit 1ecea4d7b0b90a505b127be5c45ebbe5aafad13d[m
+Merge: 5be01ce 12cd062
+Author: Amartuvshin <amar@icodice.com>
+Date:   Tue Jan 29 09:44:12 2019 -0600
+
+    Merge https://urbancountertop.scm.azurewebsites.net:443/urbancountertop
+    
+    # Conflicts:
+    #       resources/views/virtual/body.php
+    #       routes/web.php
+
+[33mcommit 5be01ce70e929fa1adad00e8a631257dab788d36[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Tue Jan 29 09:40:15 2019 -0600
+
+    Update
+
+[33mcommit 12cd06213d7f863fc7632b852578afda6680e563[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Mon Jan 28 18:30:37 2019 -0600
+
+    Virtual
+
+[33mcommit 601cb0a3648ae8291add1f0519f84cefc6b51bdb[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Mon Jan 28 18:23:39 2019 -0600
+
+    Hee
+
+[33mcommit cf6ace5bb1e9885ed83d9748ce14e3a6a4785b03[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Mon Jan 28 18:20:14 2019 -0600
+
+    Urban Counter Virtual
+
+[33mcommit 19a394253fde79b10705630898571c9f292ed040[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Mon Jan 28 15:55:01 2019 -0600
+
+    Virtual Page
+
+[33mcommit 50d0d56d592461284167ffdf85ad836de49be6fd[m
+Merge: 7226bcc b89e44e
+Author: Amartuvshin <amar@icodice.com>
+Date:   Mon Jan 28 15:48:49 2019 -0600
+
+    Merge https://urbancountertop.scm.azurewebsites.net:443/urbancountertop
+
+[33mcommit 7226bccdffe3cd97c30f690005da936c87b30331[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Mon Jan 28 15:48:17 2019 -0600
+
+    Update
+
+[33mcommit b89e44e0d1f8bdb54f1fd95063cc547b44640b1a[m
+Merge: ce6ac0d c4c9b28
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Mon Jan 28 14:01:19 2019 -0600
+
+    Merge https://urbancountertop.scm.azurewebsites.net:443/urbancountertop
+
+[33mcommit ce6ac0d04f9c769a67226a941362383dc72d9724[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Mon Jan 28 14:00:54 2019 -0600
+
+    Urban Stones
+
+[33mcommit c4c9b2800756a63468ff4fd44a137bdc4c139c77[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Mon Jan 28 13:40:22 2019 -0600
+
+    Update
+
+[33mcommit 5b2bbc2c1296755c7ffb322b4ad2ee0b7730e9ca[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Mon Jan 28 13:02:42 2019 -0600
+
+    Update
+
+[33mcommit 1f0accf2e484b627f655fd160364288a860b8cef[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Mon Jan 28 12:58:54 2019 -0600
+
+    Update
+
+[33mcommit b6e547bcc9c3ba809ecb25223c1c7e2e20369a81[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Fri Jan 25 16:31:26 2019 -0600
+
+    'Update'
+
+[33mcommit eff7f3d51c777170dee1d30b542cfd66a81cb7cf[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Fri Jan 25 16:18:20 2019 -0600
+
+    'Update'
+
+[33mcommit 11a9336fe4349c12b8f9668931d8d3665031ba73[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Fri Jan 25 16:08:38 2019 -0600
+
+    Update post detail
+
+[33mcommit 183f94d6fcb3fe4e6499a280f59b74b28b23e3ec[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Fri Jan 25 14:17:03 2019 -0600
+
+    'Update'
+
+[33mcommit d5b77d78e2ea0899337c3ed997e777a6d70c2296[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Fri Jan 25 14:12:52 2019 -0600
+
+    icon add
+
+[33mcommit eb02b75f1a48c5d289294c580b6a3150fc70f876[m[33m ([m[1;31morigin/master[m[33m)[m
+Merge: 880afd8 3d4aeeb
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Thu Jan 24 17:54:44 2019 -0600
+
+    Fix the conflicts
+
+[33mcommit 880afd8331026e356672ab74270bdc84b12fe2ee[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Thu Jan 24 17:51:05 2019 -0600
+
+    Testminails Quote Contact
+
+[33mcommit 3d4aeeb023c422f32f0585a29ca74dbb799f896b[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Thu Jan 24 17:25:31 2019 -0600
+
+    #Visual
+
+[33mcommit f4332f78f0f87abffe3d36e928daaf74936a28d9[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Thu Jan 24 15:19:41 2019 -0600
+
+    #SinksController.php
+    #sink.blade.php (Image)
+
+[33mcommit 1520d40e5ae07dbf24e38a36b0137e8238c0e659[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Thu Jan 24 12:32:15 2019 -0600
+
+    #index.blade.php
+    #HomeController.php
+    #post_detail.blade.php (Image)
+
+[33mcommit 3052dc24e05ffd4ed73a54b0d04da6c1a0d454a6[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Thu Jan 24 12:03:31 2019 -0600
+
+    Fixed the conflicts
+
+[33mcommit 757365a5bfa05e44107952cda3857916bd396ada[m
+Merge: cc91f9c 3988b2f
+Author: Amartuvshin <amar@icodice.com>
+Date:   Thu Jan 24 11:53:35 2019 -0600
+
+    Merge branch 'master' of http://gitlab.icodice.com/web/urban-countertops
+    
+    # Conflicts:
+    #       resources/views/menu.blade.php
+    #       resources/views/stones.blade.php
+
+[33mcommit cc91f9cb9bcfc81152ee51070dd75d37cb6d843d[m
+Author: Amartuvshin <amar@icodice.com>
+Date:   Thu Jan 24 11:50:58 2019 -0600
+
+    Update
+
+[33mcommit 3988b2f3e644ff4845d6e2a62bf7f1908d1494dc[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Thu Jan 24 11:40:52 2019 -0600
+
+    website controllers changed
+
+[33mcommit fbf78b3bd6673dbd8cff8ca06a380116036c6f7e[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Thu Jan 24 11:15:24 2019 -0600
+
+    Back end controller changes
+
+[33mcommit 2b974a9a67047ebc4493e318750f2e29eee641a3[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Wed Jan 23 17:47:11 2019 -0600
+
+    Urban new Back End
+
+[33mcommit 9fe3ac7becc356939fceca80508734f7d785539c[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Mon Jan 21 14:10:20 2019 -0600
+
+    Fixed the routing and added 404 page
+
+[33mcommit c54f981104aa46dead4430c1e0900a3fb068be54[m
+Author: Tsoodol <tsoodol@icodice.com>
+Date:   Mon Jan 21 12:55:49 2019 -0600
+
+    Web config
+
+[33mcom
