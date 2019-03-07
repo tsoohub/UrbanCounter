@@ -31,28 +31,28 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <form id="form" class="contact-form" data-toggle="validator" novalidate="true" action="../email/contact.php" method="POST" autocomplete="on">
+                        <form id="form" class="contact-form" method="POST" autocomplete="on">
                             <div class="row">
                                 <div class="col-md-6  col-sm-12 col-xs-12">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Name</label>
-                                                <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required="" data-error="Please enter your name">
+                                                <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required="required" data-error="Please enter your name">
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>E-mail</label>
-                                                <input type="email" class="form-control" id="email" name="email" placeholder="JohnDoe@email.com" required="" data-error="Please enter your email">
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="JohnDoe@email.com" required="required" data-error="Please enter your email">
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Subject</label>
-                                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Hello" required="" data-error="Please enter your subject">
+                                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Hello" required="required" data-error="Please enter your subject">
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                         </div>
@@ -63,7 +63,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Message</label>
-                                                <textarea class="form-control" id="message"  name="message" style="height: 130px;" placeholder="" cols="10" rows="11" maxlength="5000" data-error="Write your message" required=""></textarea>
+                                                <textarea class="form-control" id="message"  name="message" style="height: 130px;" placeholder="" cols="10" rows="11" maxlength="5000" data-error="Write your message" required="required"></textarea>
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                         </div>
@@ -124,10 +124,10 @@
                     <h4 class="modal-title">Thank you</h4>
                 </div>
                 <div class="modal-body">
-                    <p>Your message was successfuly sent , We will get back to you very soon, if you need to browse our site just click the link below.</p>
+                    <p>Your message was successfully sent , We will get back to you very soon, if you need to browse our site just click the link below.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-dismiss="modal" style="color:#3778b9!important; background-color: #3778b9 !important;">Close</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal" style="color:whitesmoke!important; background-color: #087071 !important;">Close</button>
                 </div>
             </div>
         </div>
@@ -135,4 +135,5 @@
     <div class="map" style="margin-bottom:-5px;">
         <iframe class="map-black-white" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4420.738071086475!2d-87.7133652525986!3d41.8262797209695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e321a2d6f89ad%3A0x4c1da36516ec232!2s3734+S+St+Louis+Ave%2C+Chicago%2C+IL+60632!5e0!3m2!1sen!2sus!4v1465681550370" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
+
 @endsection

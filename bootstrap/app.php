@@ -23,7 +23,9 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
-$app->withFacades();
+$app->withFacades(true, [
+    'Illuminate\Support\Facades\Mail' => 'Mail',
+]);
 
 $app->withEloquent();
 
@@ -82,7 +84,7 @@ $app->routeMiddleware([
 $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 
-
+$app->configure('mail');
 $app->register(Illuminate\Mail\MailServiceProvider::class);
 
 $app->register(\App\Providers\ControllersServiceProvider::class);
@@ -110,7 +112,6 @@ $app->router->group([
  *  Register the mailer and its aliases
  *
  * */
-$app->configure('mail');
 $app->alias('mailer', Illuminate\Mail\Mailer::class);
 $app->alias('mailer', Illuminate\Contracts\Mail\Mailer::class);
 $app->alias('mailer', Illuminate\Contracts\Mail\MailQueue::class);

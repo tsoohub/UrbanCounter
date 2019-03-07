@@ -15,33 +15,108 @@ jQuery(document).ready(function() {
 $(document).ready(function(){
     $('#form').submit(function(e){
         e.preventDefault();
-        $.blockUI({ css: {
-                border: 'none',
-                padding: '15px',
-                backgroundColor: '#000',
-                '-webkit-border-radius': '10px',
-                '-moz-border-radius': '10px',
-                opacity: .5,
-                color: '#fff'
-            } });
-        setTimeout($.unblockUI, 1000);
+
+        let name = document.getElementById('name');
+        let email = document.getElementById('email');
+        let subject = document.getElementById('subject');
+        let message = document.getElementById('message');
+
+        if (name.value === "" || name.value.length === 0)
+        {
+            window.alert("Please enter your name.");
+            name.focus();
+            return false;
+        }
+        if (email.value === "" || email.value.length === 0 || !validateEmail(email.value))
+        {
+            window.alert("Please enter a valid e-mail address.");
+            email.focus();
+            return false;
+        }
+        if (subject.value === "" || subject.value.length === 0)
+        {
+            window.alert("Please enter a subject.");
+            subject.focus();
+            return false;
+        }
+        if (message.value === "" || message.value.length === 0)
+        {
+            window.alert("Please enter a message.");
+            message.focus();
+            return false;
+        }
+
         $.ajax({
             type: 'post',
-            url: 'email/contact.php',
+            url: 'sendEmail',
             data: $('#form').serialize(),
             success: function (response) {
-                if(response == 1){
-                    setTimeout(function() {
-                            $(
-                                "#myModal").modal('show');
-                            $('#form').trigger("reset");
-                        },
-                        2000
-                    );
-                }
+                setTimeout(function() {
+                        $("#myModal").modal('show');
+                        $('#form').trigger("reset");
+                    },
+                    2000
+                );
             }
         });
     });
+
+    $('#quote').submit(function(e) {
+        e.preventDefault();
+
+        let form_data = new FormData();
+        let file_data = $('#file').prop('files')[0];
+
+        form_data.append('uploadFile', file_data);
+        form_data.append('name', $('#inputName').val());
+        form_data.append('email', $('#inputEmail').val());
+        form_data.append('phone', $('#phone').val());
+        form_data.append('message', $('#message').val());
+
+        $.ajax({
+            type: 'post',
+            url: 'sendQuote',
+            data: form_data,
+
+            cache: false,
+            contentType: false,
+            processData: false,
+            xhr: function() {
+                var myXhr = $.ajaxSettings.xhr();
+                if (myXhr.upload) {
+                    // For handling the progress of the upload
+                    myXhr.upload.addEventListener('progress', function(e) {
+                        if (e.lengthComputable) {
+                            $('progress').attr({
+                                value: e.loaded,
+                                max: e.total,
+                            });
+                        }
+                    } , false);
+                }
+                return myXhr;
+            },
+            success: function (response) {
+                setTimeout(function() {
+                        $("#myModal").modal('show');
+                        $('#quote').trigger("reset");
+                        $('.file-upload-wrapper').attr('data-text', 'Select your file!');
+                    },
+                    2000
+                );
+            }
+        });
+    });
+
+    $('#file').change(function() {
+        $('.file-upload-wrapper').attr('data-text', $(this).prop('files')[0].name);
+    });
+
+    function validateEmail(email)
+    {
+        var re = /\S+@\S+/;
+        return re.test(email);
+    }
 });
 
 jQuery(document).ready(function($) {

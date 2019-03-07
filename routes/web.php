@@ -95,6 +95,16 @@ $router->get('/api/forms/settings/{formId}', [
 ]);
 
 
+/* Send Email */
+$router->post('/sendEmail', [
+    'uses' => 'MailController@send'
+]);
+
+/* Send Email */
+$router->post('/sendQuote', [
+    'uses' => 'MailController@sendQuote'
+]);
+
 /* Posts Routers */
 $router->get('/api/posts/', [
     'uses' => 'PostsController@getPosts'
