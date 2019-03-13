@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="col-md-12">
                     <div class="header-wrap text-center">
-                        <h3>Send us a messages</h3>
+                        <h3>Send us a message</h3>
                         <p class="description">We would like to hear from you</p>
                     </div>
                 </div>
