@@ -132,3 +132,9 @@ $router->get('/api/postsMeta/postId/{id}', [
 $router->post('/api/login', [
     'uses' => 'AuthorizationController@login'
 ]);
+
+/* Authorization Routers */
+$router->get('/api/path', [
+    'middleware' => 'auth',
+    'uses' => 'ApiController@pathFolder'
+]);

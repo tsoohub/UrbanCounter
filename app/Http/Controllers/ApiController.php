@@ -52,4 +52,45 @@ class ApiController extends Controller
         return \view('person')->with('person', $person);
     }
 
+    public function pathFolder() {
+        // find the subdirectories of public folder
+        $directors = $this->listFolderFiles(public_path());
+
+        // convert to the json
+        $json = json_encode(['public' => $directors]);
+
+        return $json;
+    }
+
+    // Find the all the directories only in the public folder
+    function listFolderFiles($dir){
+        // Copy the directories of given folder
+        $ffs = scandir($dir);
+
+        // Remove useless dots
+        unset($ffs[array_search('.', $ffs, true)]);
+        unset($ffs[array_search('..', $ffs, true)]);
+
+        // prevent empty ordered elements
+        if (count($ffs) < 1)
+            return;
+
+        // subdirectories of folder
+        $dirs = [];
+
+        // loop the each directory to find the all directories inside it
+        foreach($ffs as $ff){
+            // is it directory
+            if(is_dir($dir.'/'.$ff)) {
+                // find the sub-directories of directory
+                $dirRes = $this->listFolderFiles($dir.'/'.$ff);
+                // if not subdirectories, give name of directory otherwise give the subdirectories
+                $dirs[$ff] = !empty($dirRes) ? $dirRes : null;
+            };
+        }
+
+        // directories
+        return $dirs;
+    }
+
 }
