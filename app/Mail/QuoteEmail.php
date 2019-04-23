@@ -23,25 +23,33 @@ class QuoteEmail extends Mailable {
     public $subject;
     public $message;
     public $phone;
-    public $attachment;
+    public $attachPath;
 
-    public function __construct($subject, $name, $email, $message, $phone, $attachment)
+    public function __construct($subject, $name, $email, $message, $phone, $attachPath)
     {
         $this->subject = $subject;
         $this->name = $name;
         $this->email = $email;
         $this->message = $message;
-        $this->attachment = $attachment;
+        $this->attachPath = $attachPath;
         $this->phone = $phone;
     }
 
 
     //build the message.
     public function build() {
-        return $this->attach($this->attachment->getRealPath(), [
-            'as' => $this->attachment->getClientOriginalName(),
-            'mime' => $this->attachment->getMimeType()
-            ])->subject($this->subject)->view('urban-email')->with('data', [
+
+        // attach the files to mail if exists
+        if(!empty($this->attachPath)) {
+            for($i = 0; $i < sizeof($this->attachPath); $i++){
+                $this->attach($this->attachPath[$i]->getRealPath(), [
+                    'as' => $this->attachPath[$i]->getClientOriginalName(),
+                    'mime' => $this->attachPath[$i]->getMimeType()
+                ]);
+            }
+        }
+
+        return $this->subject($this->subject)->view('urban-email')->with('data', [
             'name' => $this->name,
             'email' => $this->email,
             'phone' => $this->phone,

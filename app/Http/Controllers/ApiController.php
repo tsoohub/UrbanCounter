@@ -54,10 +54,16 @@ class ApiController extends Controller
 
     public function pathFolder() {
         // find the subdirectories of public folder
-        $directors = $this->listFolderFiles(public_path());
+        $children = $this->listFolderFiles(public_path().'/data');
+
+        $directors = array(
+            'text' => '/',
+            'state' => ['opened' => true],
+            'children' => !empty($children) ? $children : ""
+        );
 
         // convert to the json
-        $json = json_encode(['public' => $directors]);
+        $json = json_encode($directors);
 
         return $json;
     }
@@ -83,9 +89,13 @@ class ApiController extends Controller
             // is it directory
             if(is_dir($dir.'/'.$ff)) {
                 // find the sub-directories of directory
-                $dirRes = $this->listFolderFiles($dir.'/'.$ff);
-                // if not subdirectories, give name of directory otherwise give the subdirectories
-                $dirs[$ff] = !empty($dirRes) ? $dirRes : null;
+                $children = $this->listFolderFiles($dir.'/'.$ff);
+
+                $dirs[] = array(
+                    'text' => $ff,
+                    'state' => ['opened' => false],
+                    'children' => !empty($children) ? $children : ""
+                );
             };
         }
 

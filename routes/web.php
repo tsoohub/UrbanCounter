@@ -134,7 +134,7 @@ $router->post('/api/login', [
 ]);
 
 /* Authorization Routers */
-$router->get('/api/path', [
+$router->post('/api/path', [
     'middleware' => 'auth',
     'uses' => 'ApiController@pathFolder'
 ]);

@@ -26,7 +26,7 @@
                                 <div class="card-body">
                                     <h3 class="text-center">Request a Free Quote</h3>
                                     <hr>
-                                    <form autocomplete="off" id="quote" class="form" role="form" name="upload" action="connect.php" method="POST" enctype="multipart/form-data">
+                                    <form autocomplete="off" id="quote" class="form" role="form" name="upload" method="POST" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <label for="inputName">Your Name*</label>
                                             <input class="form-control" id="inputName" name="name" required="required" title="Your name" type="text" placeholder="Your name">
@@ -40,23 +40,22 @@
                                             <input autocomplete="off" id="phone" class="form-control" name="phone" maxlength="20"  required="required" title="Phone number" type="text" placeholder="Your Phone">
                                         </div>
                                         <div class="form-group" >
-                                            <label for="exampleMessage">File Uploads</label>
-                                            <div style="border:1px solid #e1e1e1; border-radius: 0 5px 5px 0;">
-                                                <div class="form-group1">
-                                                    <div class="file-upload-wrapper" data-text="Select your file!">
-                                                        <input name="uploadFile" type="file" class="file-upload-field" id="file">
-                                                    </div>
+                                            <label for="exampleMessage">File Uploads</label><br/>
+                                            <label style="font-size: 11px;">Max File Size: 5MB</label>
+                                            <div class="dropzone needsclick" id="urban-upload" >
+                                                <div class="dz-message needsclick">
+                                                    Drop files here or click to upload.
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleMessage">Message</label>
-                                            <textarea class="form-control" name="message" id="message" rows="6" required="required"></textarea>
+                                            <textarea class="form-control" name="message" id="message" rows="6" style="height: 110px;" required="required"></textarea>
                                         </div>
                                         <hr>
                                         <div class="form-group row">
                                             <div class="col-md-12">
-                                                <button class="btn btn-success btn-lg btn-block" type="submit">Submit</button>
+                                                <button class="btn btn-success btn-lg btn-block" id="submitQuote" type="button">Submit</button>
                                             </div>
                                         </div>
                                     </form>

@@ -32,10 +32,9 @@ class MailController extends Controller
         $email = $request->email ?? "";
         $phone = $request->phone ?? "";
         $message = $request->message ?? "";
-
-        if($request->hasFile('uploadFile')) {
-            $attachment = $request->file('uploadFile');
-            $this->sendQuoteEmail('Request a Free Quote - '.$phone, $name, $email, $message, $phone, $attachment);
+        if($request->hasFile('file') && !empty($request->file('file'))) {
+            $attachments = $request->file('file');
+            $this->sendQuoteEmail('Request a Free Quote - '.$phone, $name, $email, $message, $phone, $attachments);
         }
         else {
             $this->sendEmail('Request a Free Quote', $name, $email, $message);
@@ -48,7 +47,7 @@ class MailController extends Controller
     }
 
     //send email
-    public function sendQuoteEmail($subject, $fromName, $fromEmail, $message, $phone, $attachment) {
-        Mail::to(env('MAIL_TO_ADDRESS'))->send(new QuoteEmail($subject, $fromName, $fromEmail, $message, $phone, $attachment));
+    public function sendQuoteEmail($subject, $fromName, $fromEmail, $message, $phone, $attachments) {
+        Mail::to(env('MAIL_TO_ADDRESS'))->send(new QuoteEmail($subject, $fromName, $fromEmail, $message, $phone, $attachments));
     }
 }

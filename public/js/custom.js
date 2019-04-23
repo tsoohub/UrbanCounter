@@ -1,4 +1,7 @@
 "use strict";
+
+Dropzone.autoDiscover = false;
+
 /* Slide */
 jQuery(document).ready(function() {
     jQuery('.fullwidthabanner').revolution({
@@ -61,55 +64,64 @@ $(document).ready(function(){
         });
     });
 
-    $('#quote').submit(function(e) {
-        e.preventDefault();
+    let dropzone = new Dropzone('#urban-upload', {
+        url: '/sendQuote',
+        autoProcessQueue: false,
+        addRemoveLinks: true,
+        parallelUploads: 25,
+        maxFilesize: 8,
+        thumbnailHeight: 80,
+        thumbnailWidth: 80,
+        uploadMultiple: true,
+        init: function(file) {
+            this.on("addedfile", function(file) {
+                var removeButton = Dropzone.createElement("<button class='btn btn-sm btn-default fullwidth margin-top-10'>Remove file</button>");
+                var _this = this;
+                removeButton.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    _this.removeFile(file);
+                    if (file.status == 'success') {
+                        parent.removeImage(file.xhr.response);
+                    }
+                });
+                file.previewElement.appendChild(removeButton);
+            });
 
-        let form_data = new FormData();
-        let file_data = $('#file').prop('files')[0];
-
-        form_data.append('uploadFile', file_data);
-        form_data.append('name', $('#inputName').val());
-        form_data.append('email', $('#inputEmail').val());
-        form_data.append('phone', $('#phone').val());
-        form_data.append('message', $('#message').val());
-
-        $.ajax({
-            type: 'post',
-            url: 'sendQuote',
-            data: form_data,
-
-            cache: false,
-            contentType: false,
-            processData: false,
-            xhr: function() {
-                var myXhr = $.ajaxSettings.xhr();
-                if (myXhr.upload) {
-                    // For handling the progress of the upload
-                    myXhr.upload.addEventListener('progress', function(e) {
-                        if (e.lengthComputable) {
-                            $('progress').attr({
-                                value: e.loaded,
-                                max: e.total,
-                            });
-                        }
-                    } , false);
-                }
-                return myXhr;
-            },
-            success: function (response) {
-                setTimeout(function() {
-                        $("#myModal").modal('show');
-                        $('#quote').trigger("reset");
-                        $('.file-upload-wrapper').attr('data-text', 'Select your file!');
-                    },
-                    2000
-                );
-            }
-        });
+            this.on("complete", function(file) {
+                this.removeAllFiles(true);
+            })
+        },
     });
 
-    $('#file').change(function() {
-        $('.file-upload-wrapper').attr('data-text', $(this).prop('files')[0].name);
+    dropzone.on('sendingmultiple', function (file, xhr, formData) {
+
+        formData.append('name', $('#inputName').val());
+        formData.append('email', $('#inputEmail').val());
+        formData.append('phone', $('#phone').val());
+        formData.append('message', $('#message').val());
+
+    });
+    dropzone.on("successmultiple", function(files, response) {
+        setTimeout(function() {
+                $("#myModal").modal('show');
+                $('#quote').trigger("reset");
+            },
+            2000
+        );
+    });
+    dropzone.on("errormultiple", function(files, response) {
+        alert(response);
+    });
+
+    $("#submitQuote").click(function (e) {
+        e.preventDefault();
+
+        if (dropzone.getQueuedFiles().length === 0) {
+            alert('Upload the at least one file');
+        } else {
+            dropzone.processQueue();
+        }
     });
 
     function validateEmail(email)

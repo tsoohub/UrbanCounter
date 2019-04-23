@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="col-md-12">
                     <div class="header-wrap text-center">
-                        <h3>Send us a message</h3>
+                        <h3>Send us a messages</h3>
                         <p class="description">We would like to hear from you</p>
                     </div>
                 </div>
@@ -127,7 +127,7 @@
                     <p>Your message was successfully sent , We will get back to you very soon, if you need to browse our site just click the link below.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-dismiss="modal" style="color:whitesmoke!important; background-color: #087071 !important;">Close</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal" style="color:whitesmoke!important; background-color: #3778b9 !important;">Close</button>
                 </div>
             </div>
         </div>
